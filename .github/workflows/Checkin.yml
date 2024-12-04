@@ -5,15 +5,15 @@ on:
   schedule:
     # UTC+8 00:00
     # - cron: "0 16 * * *"
-    # UTC+8 08:00
-    - cron: "0 0 * * *"
+    # UTC+8 09:00
+    - cron: "0 1 * * *"
 
 jobs:
   checkin:
     runs-on: ubuntu-latest
     environment: HIFINI
     env:
-      COOKIE: ${{ secrets.COOKIE }}
+      COOKIE: ${{ secrets.COOKIE_1 }}
 
     steps:
       - uses: actions/checkout@v4
